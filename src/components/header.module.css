@@ -1,0 +1,19 @@
+.navigation {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 14px 0;
+    text-align: right;
+}
+
+.navigation li {
+    display: inline;
+}
+
+.navigation li a {
+    padding: 14px;
+}
+
+.logoContainer {
+    float: left;
+}
