@@ -1,19 +1,60 @@
-.navigation {
-    width: 100%;
-    max-width: 1440px;
-    margin: 0 auto;
-    padding: 14px 0;
-    text-align: right;
+nav {
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    margin: auto;
 }
 
-.navigation li {
-    display: inline;
+.logo {
+    margin-right: auto;
 }
 
-.navigation li a {
-    padding: 14px;
+.dropDown > a {
+    margin-left: 20px;
+    text-decoration: none;
 }
 
-.logoContainer {
-    float: left;
+.toggleBtn {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .logo, .toggleBtn {
+        z-index: 1;
+    }
+
+    .toggleBtn {
+        display: initial;
+        border: 0;
+        background-color: transparent;
+    }
+
+    .toggleBtn:hover {
+        cursor: pointer;
+    }
+
+    .dropDown {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 100vh;
+        height: -webkit-fill-available;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+        margin: 0;
+        padding: 0 7vw;
+        background-color: rebeccapurple;
+        z-index: 0;
+        opacity: 0;
+        transform: translateY(-100%);
+        transition: transform 0.2s, opacity 0.2s;
+    }
+
+    nav.dropDownOpen > .dropDown {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
